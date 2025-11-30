@@ -207,13 +207,13 @@
     <script>
       // Add timestamp to prevent caching
       const timestamp = new Date().getTime();
-      
+
       // Update stylesheet link
-      const styleLink = document.getElementById('main-styles');
+      const styleLink = document.getElementById("main-styles");
       styleLink.href = `styles.css?v=${timestamp}`;
-      
+
       // Load script with timestamp
-      const script = document.createElement('script');
+      const script = document.createElement("script");
       script.src = `script.js?v=${timestamp}`;
       document.body.appendChild(script);
     </script>

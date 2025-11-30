@@ -58,12 +58,22 @@ header {
   justify-content: space-between;
   align-items: center;
   min-height: 80px;
+  transition: min-height 0.3s ease;
+}
+
+header.scrolled .nav-container {
+  min-height: 60px;
 }
 
 .logo h1 {
   color: var(--text-light);
   font-size: 1.8rem;
   margin-bottom: 0;
+  transition: font-size 0.3s ease;
+}
+
+header.scrolled .logo h1 {
+  font-size: 1.4rem;
 }
 
 .logo .subtitle {
@@ -73,6 +83,11 @@ header {
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-top: -5px;
+  transition: font-size 0.3s ease;
+}
+
+header.scrolled .logo .subtitle {
+  font-size: 0.75rem;
 }
 
 .nav-menu {
@@ -228,17 +243,28 @@ header {
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
   box-shadow: var(--shadow-hover);
+  border: 2px solid var(--secondary-color);
+  background: linear-gradient(135deg, #ffffff 0%, #fafaf5 100%);
 }
 
 .service-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
+  transition: all 0.3s ease;
 }
 
 .service-icon i {
   color: var(--secondary-color);
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.15);
+}
+
+.service-card:hover .service-icon i {
+  color: var(--primary-color);
 }
 
 .service-card h3 {

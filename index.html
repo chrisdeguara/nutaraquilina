@@ -76,6 +76,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://web3forms.com/client/script.js" async defer></script>
   </head>
   <body>
     <header>
@@ -234,44 +235,89 @@
       <section id="contact" class="contact" aria-label="Contact Information">
         <div class="container">
           <h2>Contact Me</h2>
-          <div class="contact-content">
-            <div
-              class="contact-info"
-              itemscope
-              itemtype="https://schema.org/ContactPage"
-            >
-              <p>
-                For professional notarial services in Malta, please don't
-                hesitate to reach out. I am available for consultations and
-                appointments.
-              </p>
+          <div class="contact-intro">
+            <p>
+              For professional notarial services in Malta, please don't hesitate
+              to reach out. I am available for consultations and appointments.
+            </p>
+          </div>
 
-              <div class="contact-details">
-                <div class="contact-item">
-                  <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                  <div>
-                    <h4>Phone</h4>
-                    <p><a href="tel:+35699241495">+356 9924 1495</a></p>
-                  </div>
-                </div>
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                  </div>
-                  <div>
-                    <h4>Location</h4>
-                    <p>Birkirkara, Malta</p>
-                  </div>
-                </div>
-                <div class="contact-item">
-                  <div class="contact-icon"><i class="fas fa-clock"></i></div>
-                  <div>
-                    <h4>Availability</h4>
-                    <p>By appointment</p>
-                  </div>
-                </div>
+          <div
+            class="contact-details"
+            itemscope
+            itemtype="https://schema.org/ContactPage"
+          >
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4>Phone</h4>
+                <p><a href="tel:+35699241495">+356 9924 1495</a></p>
               </div>
             </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h4>Location</h4>
+                <p>Birkirkara, Malta</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <h4>Availability</h4>
+                <p>By appointment</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-container">
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              class="contact-form"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="YOUR_ACCESS_KEY_HERE"
+              />
+              <input
+                type="hidden"
+                name="subject"
+                value="New Contact Form Submission from Nutar Aquilina"
+              />
+              <input
+                type="hidden"
+                name="from_name"
+                value="Nutar Aquilina Website"
+              />
+
+              <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Full Name" required />
+              </div>
+
+              <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email Address" required />
+              </div>
+
+              <div class="form-group">
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number (optional)" />
+              </div>
+
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="submit-button">Send Message</button>
+            </form>
           </div>
         </div>
       </section>

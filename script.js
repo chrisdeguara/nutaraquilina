@@ -79,3 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(card);
   });
 });
+
+// Dynamic copyright year
+document.getElementById("year").textContent = new Date().getFullYear();

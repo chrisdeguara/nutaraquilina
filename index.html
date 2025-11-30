@@ -280,8 +280,8 @@
     <footer>
       <div class="container">
         <p>
-          &copy; <span id="current-year"></span> Dr. Maria Aquilina - Notary
-          Public Malta. All rights reserved.
+          &copy; <span id="year"></span> Dr. Maria Aquilina - Notary Public
+          Malta. All rights reserved.
         </p>
         <p class="footer-note">
           Professional notarial services provided in accordance with Maltese
@@ -300,10 +300,6 @@
     </footer>
 
     <script>
-      // Set current year dynamically
-      document.getElementById("current-year").textContent =
-        new Date().getFullYear();
-
       // Add timestamp to prevent caching
       const timestamp = new Date().getTime();
 

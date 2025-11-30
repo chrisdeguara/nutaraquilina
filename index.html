@@ -12,7 +12,7 @@
       content="notary public, Malta, Maria Aquilina, Nutar Aquilina, legal services, property conveyancing, wills, contracts"
     />
     <title>Maria Aquilina - Notary Public Malta</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" id="main-styles" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -204,6 +204,18 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      // Add timestamp to prevent caching
+      const timestamp = new Date().getTime();
+      
+      // Update stylesheet link
+      const styleLink = document.getElementById('main-styles');
+      styleLink.href = `styles.css?v=${timestamp}`;
+      
+      // Load script with timestamp
+      const script = document.createElement('script');
+      script.src = `script.js?v=${timestamp}`;
+      document.body.appendChild(script);
+    </script>
   </body>
 </html>

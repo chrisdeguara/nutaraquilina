@@ -432,6 +432,23 @@ footer p {
   opacity: 0.8;
 }
 
+.footer-credit {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin-top: 0.5rem;
+}
+
+.footer-credit a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footer-credit a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-menu {

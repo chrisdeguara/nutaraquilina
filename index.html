@@ -368,16 +368,9 @@
     </footer>
 
     <script>
-      // Add timestamp to prevent caching
-      const timestamp = new Date().getTime();
-
-      // Update stylesheet link
-      const styleLink = document.getElementById("main-styles");
-      styleLink.href = `styles.css?v=${timestamp}`;
-
-      // Load script with timestamp
+      // Load script with cache-busting query string
       const script = document.createElement("script");
-      script.src = `script.js?v=${timestamp}`;
+      script.src = "script.js?v=20251201";
       document.body.appendChild(script);
     </script>
   </body>

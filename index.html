@@ -62,7 +62,13 @@
     <title>
       Dr. Maria Aquilina - Notary Public Malta | Professional Legal Services
     </title>
-    <link rel="stylesheet" href="styles.css" id="main-styles" />
+    <script>
+      document.write(
+        '<link rel="stylesheet" id="main-styles" href="styles.css?v=' +
+          Date.now() +
+          '">'
+      );
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

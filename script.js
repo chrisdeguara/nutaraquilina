@@ -82,3 +82,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Dynamic copyright year
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// Contact Form Handling
+const contactForm = document.getElementById("web3form");
+const formMessage = document.getElementById("formMessage");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.innerHTML;
+
+    // Disable button and show loading state
+    submitButton.disabled = true;
+    submitButton.innerHTML =
+      '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    formMessage.style.display = "none";
+
+    try {
+      const formData = new FormData(contactForm);
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        formMessage.textContent =
+          "Thank you. Your message has been sent successfully.";
+        formMessage.className = "form-message success";
+        formMessage.style.display = "block";
+        contactForm.reset();
+      } else {
+        throw new Error(data.message || "Something went wrong");
+      }
+    } catch (error) {
+      formMessage.textContent =
+        "Oops! Something went wrong. Please try again or contact me directly.";
+      formMessage.className = "form-message error";
+      formMessage.style.display = "block";
+    } finally {
+      submitButton.disabled = false;
+      submitButton.innerHTML = originalButtonText;
+    }
+  });
+}

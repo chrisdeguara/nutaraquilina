@@ -277,6 +277,7 @@
               action="https://api.web3forms.com/submit"
               method="POST"
               class="contact-form"
+              id="web3form"
             >
               <input
                 type="hidden"
@@ -333,7 +334,11 @@
                 ></textarea>
               </div>
 
-              <button type="submit" class="submit-button">Send Message</button>
+              <button type="submit" class="submit-button">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+
+              <div id="formMessage" class="form-message"></div>
             </form>
           </div>
         </div>

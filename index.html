@@ -391,9 +391,9 @@
     </footer>
 
     <script>
-      // Load script with cache-busting query string
+      // Load script with cache-busting query string using Date.now()
       const script = document.createElement("script");
-      script.src = "script.js?v=20251201";
+      script.src = `script.js?v=${Date.now()}`;
       document.body.appendChild(script);
     </script>
   </body>

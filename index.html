@@ -85,6 +85,23 @@
     <script src="https://web3forms.com/client/script.js" async defer></script>
   </head>
   <body>
+        <!-- Spinner Overlay -->
+        <div id="spinner-overlay">
+          <div class="spinner"></div>
+        </div>
+    <script>
+      // Hide spinner overlay when page fully loads
+      window.addEventListener('load', function() {
+        var spinner = document.getElementById('spinner-overlay');
+        if (spinner) spinner.style.display = 'none';
+      });
+    </script>
+    <script>
+      // Load script with cache-busting query string
+      const script = document.createElement("script");
+      script.src = "script.js?v=20251201";
+      document.body.appendChild(script);
+    </script>
     <header>
       <nav>
         <div class="nav-container">
